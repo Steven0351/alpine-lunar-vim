@@ -4,7 +4,7 @@ COPY --from=steven0351/tree-sitter:latest /usr/bin/tree-sitter /usr/local/bin
 
 RUN echo https://dl-cdn.alpinelinux.org/alpine/edge/main > /etc/apk/repositories && \
   echo https://dl-cdn.alpinelinux.org/alpine/edge/community >> /etc/apk/repositories && \
-  apk add git curl build-base linux-headers nodejs npm py3-pip python3-dev bash fish neovim ripgrep fzf && \
+  apk add git curl build-base linux-headers nodejs npm py3-pip python3-dev neovim ripgrep fzf && \
   pip3 install neovim-remote 
 
 ENV USER_BIN_DIR /usr/local/bin
